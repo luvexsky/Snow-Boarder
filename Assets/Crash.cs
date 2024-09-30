@@ -9,7 +9,14 @@ public class Crash : MonoBehaviour
     {
         if(other.tag == "Ground")
         {
-       SceneManager.LoadScene(0);
+            Invoke("ReloadScene", 1f);
         }
+
     }
+
+    void ReloadScene()
+{
+
+         SceneManager.LoadScene(0);
+}
 }
